@@ -24,6 +24,8 @@
     "typescript": "^4.5.4"
   },
   "dependencies": {
+    "@types/joi": "^17.2.3",
+    "celebrate": "^15.0.0",
     "cors": "^2.8.5",
     "express": "^4.17.2",
     "express-async-errors": "^3.1.1",
