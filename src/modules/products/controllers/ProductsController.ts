@@ -11,7 +11,7 @@ export default class ProductsController {
 
     const products = await listProducts.execute();
 
-    return response.json(products);
+    return response.json({ products });
   }
 
   public async show(request: Request, response: Response): Promise<Response> {
@@ -21,7 +21,7 @@ export default class ProductsController {
 
     const product = await showProduct.execute({ id });
 
-    return response.json(product);
+    return response.json({ product });
   }
 
   public async create(request: Request, response: Response): Promise<Response> {
@@ -34,7 +34,7 @@ export default class ProductsController {
       quantity,
     });
 
-    return response.json(product);
+    return response.json({ product });
   }
 
   public async update(request: Request, response: Response): Promise<Response> {
@@ -50,7 +50,7 @@ export default class ProductsController {
       quantity,
     });
 
-    return response.json(product);
+    return response.json({ product });
   }
 
   public async delete(request: Request, response: Response): Promise<Response> {
