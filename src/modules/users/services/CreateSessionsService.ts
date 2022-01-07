@@ -31,7 +31,7 @@ class CreateSessionService {
       throw new AppError('Incorrect email or password.', 401);
     }
 
-    const token = sign({}, authConfig.jwt.secret, {
+    const token = sign({ id: user.id }, authConfig.jwt.secret, {
       subject: authConfig.jwt.secret,
       expiresIn: authConfig.jwt.expiresIn,
     });
